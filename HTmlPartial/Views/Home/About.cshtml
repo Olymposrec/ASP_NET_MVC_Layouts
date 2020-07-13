@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="About">About</a></li>
+            <li><a href="Homepage">Homepage</a></li>
+        </ul>
+    </div>
+    <div> 
+        <p>Sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo, eget consequat neque quam id tellus duis ultricies tempor tortor, vitae dignissim ligula mattis nec in hac habitasse platea dictumst ut arcu enim, dictum quis ultrices id, sagittis eget nulla sed nunc mi, congue ut ultricies ac, varius a eros donec porttitor, libero fermentum fringilla laoreet, eros arcu sodales ante, ut dictum risus lectus vel quam integer ultricies, nunc eget.</p>
+    </div>
+    <div>
+        Footer
+        <hr />
+        @*@Html.Partial("_PartialLinkler")*@
+    <p>Yanı HTML.Partial' ı burada C# razor syntax ile çağıracağız. Hiçbir farkı yok aslında.</p>
+        @{ 
+            @Html.Partial("_PartialLinkler");
+        }
+        <b>Tüm Hakları Saklıdır</b>
+    </div>
+</body>
+</html>
