@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_LayoutPage4.cshtml";
+}
+
+<h2>Blog</h2>
+<hr />
+<p>
+    Bu bölümde "Section" oluşturmayı ve sürekli layout ekleyerek yenilik getirmekten ise
+    belirli bölümleri "Atsign"RenderSection("Footer") veya "Atsign"RenderSection("Linkler")
+    gibi kısımlar oluşturarak daha hızlı şekilde biçimlendirmeyi öğreneceğiz.
+</p>
+<pre>Layoutpage4' te oluşturduğumuz "atsign"Section("Linkler") kısmını buraya taşıyabilmek için gerekli kod:
+"atsign"Section "Section Adı bizimki(linkler){"Buraya gerekli linkleri yazacağız. "}"</pre>
+<pre>
+Daha önceden Blog' a tıklamadan önce Yanda çıkan Index Menüsü yoktu şimdi geldi bunu sağlayan kod aşağıdadır:
+Bu kod Blog.cshtml Sayfası içine gömülürüdr:
+section linkler
+{
+ul>  
+li>
+            Html.ActionLink("Blog", "blog", "Home")
+        /li>
+li>
+            Html.ActionLink("Index", "index", "Home")
+        /li>
+
+    /ul>
+}
+</pre>
+<p>"Section linkler" komutu ile ekstra menü eklemiş olduk. Ayrıca Footer kısmı diğer kısımlardan farklı.</p>
+<p>Çıktıya aşağıdan ulaşabilirsiniz:</p>
+
+<p>
+<pre>Section kısımlarını doldurmaz iseniz hata alırsınız. Çünkü Section ibaresinin default ayarlarında
+zorunluluk kısmı =true olarak gelmektedir.</pre>
+    <p>Kodumuzda ufak bir değişiklik yaparak bu sıkıntıyı giderebiliriz.</p>
+    <p>Layoutpage 4 section oluşturduğumuz yerdeki kodları açıyoruz. Section zorunluluğunu değiştirmek için tanımladığımız
+    "atsign"RenderSection("footer/linkler",(bu kısma false derseniz zorunlu olmaz default ayar =true'dur)false)</p>
+    <pre>RenderSection("Footer")->zorunlu
+RenderSection("linkler",false)->zorunlu değil</pre>
+</p>
+
+@section linkler
+{
+    <ul>  
+        <li>
+            @Html.ActionLink("Blog", "blog", "Home")
+        </li>
+        <li>
+            @Html.ActionLink("Index", "index", "Home")
+        </li>
+
+    </ul>
+}
+
+@section footer{
+    <b>Öğrenme amaçlı test içerikleri. Paylaşılabilir &copy;</b>}

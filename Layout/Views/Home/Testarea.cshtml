@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Testarea";
+    Layout = "~/Views/Shared/_LayoutPage3.cshtml";
+}
+
+<h2>Testarea</h2>
+<p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+<p>Bu kısımda aslında iç içe Layout kullanımını görmüş oluyoruz.</p>
+<p>Yapımını anlatacak olursak:</p>
+<ul>
+    <li>
+        İlk aşama yeni bir Layoutpage oluşturmak olacak.
+    </li>
+    <li>Bizim projemizde bu Layoutpage3 olarak isimlendirilmiştir.</li>
+    <li>Daha sonra <pre>"Atsign"{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}</pre> kodları ile bu Layout' u aslında daha önceden oluşturduğumuz Layoutpage1 ile bağlamak olacak</li>
+    <li>Ayrıca ilk "Layoutpage1" Sayfamızda bulunan CSS kodları arasına <pre>.block2 {
+            display: inline-block;
+            margin: 5px;
+            border: 2px dotted #31ebbe;
+            padding: 10px;</pre> kodlarını ekleyerek yeni layoutpage3 için yeni bir tasarım oluşturmuş olacağız.</li>
+    <li>Sonrasında Layoutpage3 için gerekli yeni tasarım ihtiyaçlarımızı karşılaması için html içine
+        <pre> div class="block2" style="width:660px;">
+        RenderBody()
+
+    /div>
+        div class="block2" style="float:right;">
+        h4>İLETİŞİM İÇİN /h4>
+        ul>
+        li>032156451232 /li>
+        li>032156414512 /li>
+        li>032156456732 /li>
+         /ul>
+     /div></pre>kodlarını ekleyeceğiz.</li>
+    <li>Burada Layoutpagelerimizi iç içe kullanmış olacağız.</li>
+    <li>Testarea kısmına girdiğiniz zaman zaten farklı iki bölümden oluşan kısım göreceksiniz.</li>
+</ul>

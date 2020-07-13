@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage4.cshtml";
+}
+
+<h2>Index</h2>
+<hr />
+
+<p>
+    Bu kısımda dediğimiz gibi blogta açıklaması bulunan olayı gösterebilmek için
+    ayrı bir bölge olarak oluşturduk. Bu sayede iki kısımda oluşan farklılıklara göz atabileceğiz.
+</p>
+<p>
+    Gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac.
+</p>
+<p> Örnek paragraf sonrası kendi yazdığımız kodları da paylaşacağız.</p>
+
+<ul>
+    <li>Adipiscing elit fusce vel sapien elit.</li>
+    <li>In malesuada semper mi, id sollicitudin.</li>
+    <li>Urna fermentum ut fusce varius nisl.</li>
+</ul>
+<p>"Section linkler" komutu ile ekstra menü eklemiş olduk. Ayrıca Footer kısmı diğer kısımlardan farklı.</p>
+<p>Çıktıya aşağıdan ulaşabilirsiniz:</p>
+
+@section linkler
+{
+    <ul>
+        <li>
+            @Html.ActionLink("Blog", "blog", "Home")
+        </li>
+        <li>
+            @Html.ActionLink("Index", "index", "Home")
+        </li>
+
+    </ul>
+}
+
+@section footer{
+    <b>Öğrenme amaçlı test içerikleri. Paylaşılamaz!(Değişti) &copy;</b>}
